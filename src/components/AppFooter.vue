@@ -90,7 +90,7 @@ export default {
 
             <div class="followus">
 
-                <h4>FOLLOW USS</h4>
+                <h4>FOLLOW US </h4>
 
                 <i class="fa-brands fa-facebook"></i>
 
@@ -207,15 +207,7 @@ a{
 }
 
 .followus i{
-    margin-right: 5px;
+    margin:0 10px;
 }
-
-i:first-child{
-    margin-left: 5px;
-}
-
-
-
-
 
 </style>
