@@ -160,11 +160,13 @@ export default {
 <template>
 
     <main>
-        <div class="jumbotron">
+        <!-- jumbotron  -->
+        <div class="jumbotron"></div>
 
-        </div>
-        <div class="container">
-            <div v-for="comic in comics" :img="comic.thumb" :title="comic.series" class="card"></div>
+        <!-- contenitore comics  -->
+        <div class="cardcontainer">
+            <div></div>
+            <!-- v-for="comic in comics" :img="comic.thumb" :title="comic.series" class="card" -->
         </div>
     </main>
 
@@ -177,6 +179,17 @@ main{
     height: 120px;
     background-color: black;
     color: wheat;
+}
+
+.cardcontainer{
+    width: 100%;
+    background-color: violet;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 main h4{

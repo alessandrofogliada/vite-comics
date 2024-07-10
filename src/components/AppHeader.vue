@@ -112,4 +112,9 @@ a{
     margin: 0 5px;
 }
 
+li :hover{
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
 </style>
