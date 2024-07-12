@@ -1,6 +1,12 @@
 <script>
+
+import AppCard from './AppCard.vue';
+
 export default {
     name: 'AppContent',
+    components:{
+        AppCard,
+    },
     data(){
         return{
             comics: [
@@ -158,17 +164,12 @@ export default {
 
 
 <template>
-
-    <main>
-        <!-- jumbotron  -->
-        <div class="jumbotron"></div>
-
         <!-- contenitore comics  -->
         <div class="cardcontainer">
-            <div></div>
-            <!-- v-for="comic in comics" :img="comic.thumb" :title="comic.series" class="card" -->
+            <div class="centracontent">
+                <AppCard v-for="(comic, i) in comics" :key="i" :infoCard="comic"/>
+            </div>
         </div>
-    </main>
 
 </template>
 
@@ -183,12 +184,8 @@ main{
 
 .cardcontainer{
     width: 100%;
-    background-color: violet;
+    background-color: black;
     min-height: 300px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    flex-wrap: wrap;
     align-content: flex-start;
 }
 
@@ -196,10 +193,21 @@ main h4{
     margin-top: 45px;
 }
 
+.centracontent{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
 .card{
     min-height: 100px;
-    width: 80px;
-    background-color: white;
+    width: calc(100% / 6);
+    /* debug  */
+    /* background-color: white;
+    border: 2px solid yellowgreen; */
 }
 
 

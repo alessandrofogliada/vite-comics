@@ -149,6 +149,7 @@ footer .iconandmerc img{
     background-position: 280px;
     color: white;
     display: flex;
+    padding-left: 100px;
 }
 
 /* first colonnina rule  */
